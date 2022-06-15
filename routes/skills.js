@@ -1,12 +1,13 @@
 import { Router } from 'express'
+import * as skillsCrtl from "../controller/skills.js"
 
 const router = Router()
 
-/* GET users listing. */
-router.get('/', function(req, res) {
-  res.send('respond with a resource')
-})
 
+// GET localhost:3000/skills
+router.get('/',skillsCrtl.index)
+router.get('/new',skillsCrtl.new)
+router.post('/',skillsCrtl.create)
 export {
-  router
+  router,
 }

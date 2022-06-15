@@ -2,15 +2,13 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema
 
-const skillsSchema = {
-  Text: String,
-  Ability: Boolean
-}
+const skillSchema = new Schema({
+  text: String,
+  ability: Boolean
+})
 
-
-
-Skills = mongoose.Schema("Skills", skillsSchema)
+const Skill = mongoose.model("Skills", skillSchema)
 
 export {
-  Skills
+  Skill
 }
